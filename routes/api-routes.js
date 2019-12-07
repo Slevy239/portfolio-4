@@ -11,7 +11,7 @@ module.exports = function(app) {
     })
 
 
-    app.post("/api/post", function(req, res) {
+    app.post("/api/new", function(req, res) {
         console.log("posted");
         console.log(req.body);
 

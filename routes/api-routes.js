@@ -1,12 +1,17 @@
 let connection = require("../config/connection.js");
 
 module.exports = function(app) {
+
+    app.get('/', function(req, res){
+        res.render('index.html')
+      });
+      
     app.get("/api/all", function(req, res) {
         let dbQuery = "SELECT * FROM contacts";
 
         connection.query(dbQuery, function(err, result) {
             if (err) throw err;
-            res.render("index.html");
+            res.render("index");
         })
     })
 

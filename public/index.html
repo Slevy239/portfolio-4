@@ -223,7 +223,9 @@
         <div id="contact-form">
             <form method="POST" action="https://formspree.io/slevy239@gmail.com">
                 <input type="hidden" name="_subject" value="Contact request from personal website" />
+                <input type="name" id="name" name="_replyto" placeholder="Your Name" required style="width: 100%;">
                 <input type="email" id="email" name="_replyto" placeholder="Your email" required>
+
                 <textarea name="message" id="body" placeholder="Your message" required></textarea>
                 <button type="submit" id="submit">Send</button>
             </form>

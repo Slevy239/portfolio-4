@@ -24,6 +24,7 @@ $("#submit").on("click", function (event) {
     event.preventDefault();
 
     let newContact = {
+        name: $("#name").val().trim(),
         email: $("#email").val().trim(),
         body: $("#body").val().trim(),
         created_at: moment().format("YYYY-MM-DD HH:mm:ss")
@@ -37,12 +38,8 @@ $.ajax("/api/new", {
     alert("Thank you for your submission!")
 })
 
-    // $.post("/api/new", newContact)
-    //     .then(function () {
-    //     })
-
-    $("#email").val("");
-    $("#body").val("");
+    // $("#email").val("");
+    // $("#body").val("");
 })
 
 })

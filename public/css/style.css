@@ -621,6 +621,9 @@ footer {
     color: #fff;
     transition: .5s ease all
 }
+#name {
+    width: 100%;
+}
 
 #contact-form input {
     width: 96%;

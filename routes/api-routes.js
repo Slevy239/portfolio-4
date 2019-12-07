@@ -5,7 +5,7 @@ module.exports = function(app) {
     app.get('/', function(req, res){
         res.render('index.html')
       });
-      
+
     app.get("/api/all", function(req, res) {
         let dbQuery = "SELECT * FROM contacts";
 
@@ -20,9 +20,9 @@ module.exports = function(app) {
         console.log("posted");
         console.log(req.body);
 
-        let dbQuery = "INSERT INTO contacts (email, body, created_at) VALUES (?,?,?)";
+        let dbQuery = "INSERT INTO contacts (name, email, body, created_at) VALUES (?,?,?,?)";
 
-        connection.query(dbQuery, [req.body.email, req.body.body, req.body.created_at], function(err, result) {
+        connection.query(dbQuery, [req.body.name, req.body.email, req.body.body, req.body.created_at], function(err, result) {
             if (err) throw err;
             console.log("saved");
             res.end();

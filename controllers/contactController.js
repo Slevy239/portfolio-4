@@ -13,7 +13,7 @@ router.get("/", function(req, res) {
 });
 
 
-router.post("/api/contact", function(req, res) {
+router.post("/api/contacts", function(req, res) {
     contact.create([
         "name", "email", "body", "created_at",
     ], [

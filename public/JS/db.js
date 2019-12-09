@@ -5,7 +5,7 @@ $(document).ready(function () {
         event.preventDefault();
 
         let newContact = {
-            title: $("#name").val().trim(),
+            contact_name: $("#name").val().trim(),
             email: $("#email").val().trim(),
             body: $("#body").val().trim(),
             created_at: moment().format("YYYY-MM-DD HH:mm:ss")

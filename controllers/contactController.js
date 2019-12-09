@@ -15,7 +15,7 @@ router.get("/", function (req, res) {
 
 router.post("/api/new", function (req, res) {
     contact.create([
-        "title", "email", "body", "created_at"
+        "contact_name", "email", "body", "created_at"
     ], [
        req.body.title, req.body.email, req.body.body, req.body.created_at 
     ],

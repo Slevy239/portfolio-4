@@ -3,7 +3,7 @@ var PORT = process.env.PORT || 8080;
 var app = express();
 var path = require('path');
 
-app.use('/public', express.static(path.join(__dirname + '/public')));
+app.use(express.static("public"));
 
 
 
@@ -21,7 +21,6 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 // Routes
 // =============================================================
-// require("./config/connection.js")(app);
 var routes = require("./controllers/contactController.js");
 app.use(routes);
 

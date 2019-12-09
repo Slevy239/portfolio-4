@@ -6,7 +6,7 @@ module.exports = function(app) {
         res.render('index.html')
       });
 
-    // app.get("/api/all", function(req, res) {
+    // app.get("/api/contact", function(req, res) {
     //     let dbQuery = "SELECT * FROM contacts";
 
     //     connection.query(dbQuery, function(err, result) {
@@ -16,7 +16,7 @@ module.exports = function(app) {
     // })
 
 
-    app.post("/api/new", function(req, res) {
+    app.post("/api/contact", function(req, res) {
         console.log("posted");
         console.log(req.body);
 

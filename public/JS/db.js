@@ -13,10 +13,10 @@ $(document).ready(function () {
         var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
         if (testEmail.test(newContact.email)) {
             console.log(newContact);
-            $.ajax("/api/contacts", {
+            $.ajax("/api/contact", {
                 type: "POST",
                 data: newContact
-                
+
             }).then(function (data) {
                 location.reload();
                 alert("Thank you for your submission!")

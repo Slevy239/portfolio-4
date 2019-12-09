@@ -20,7 +20,7 @@ router.post("/api/contacts", function (req, res) {
         req.body.name, req.body.email, req.body.body, req.body.created_at
     ], function (result) {
         console.log("hi")
-        res.json({ id: result.insterID })
+        res.redirect("/")
     }).catch(function (err) {
         res.status(401).json(err);
     });

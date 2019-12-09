@@ -14,15 +14,15 @@ module.exports = function(app) {
     //         res.render("index");
     //     })
     // })
-
+ 
 
     app.post("/api/contact", function(req, res) {
         console.log("posted");
         console.log(req.body);
 
-        let dbQuery = "INSERT INTO contacts (name, email, body, created_at) VALUES (?,?,?,?)";
+        let dbQuery = "INSERT INTO contacts (name, email, body) VALUES (?,?,?)";
 
-        connection.query(dbQuery, [req.body.name, req.body.email, req.body.body, req.body.created_at], function(err, result) {
+        connection.query(dbQuery, [req.body.name, req.body.email, req.body.body], function(err, result) {
             if (err) throw err;
             console.log("saved");
             res.end();

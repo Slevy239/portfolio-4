@@ -6,14 +6,14 @@ module.exports = function(app) {
         res.render('index.html')
       });
 
-    app.get("/api/all", function(req, res) {
-        let dbQuery = "SELECT * FROM contacts";
+    // app.get("/api/all", function(req, res) {
+    //     let dbQuery = "SELECT * FROM contacts";
 
-        connection.query(dbQuery, function(err, result) {
-            if (err) throw err;
-            res.render("index");
-        })
-    })
+    //     connection.query(dbQuery, function(err, result) {
+    //         if (err) throw err;
+    //         res.render("index");
+    //     })
+    // })
 
 
     app.post("/api/new", function(req, res) {

@@ -250,11 +250,11 @@
                 <button type="submit" id="submit">Send</button>
             </form>
             <h2>
+                <h6 class="heading" style="color: white;">Previous Visitors:</h6>
                 <div class="col text-center">
-
                     <ul class="unstyled">
-
-                        {{#each contact.name}}
+                        {{#each contacts}}
+                        <p>{{name}}</p>
                         {{/each}}
                     </ul>
                 </div>

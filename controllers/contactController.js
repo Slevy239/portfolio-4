@@ -14,16 +14,14 @@ router.get("/", function (req, res) {
 
 
 router.post("/api/contacts", function (req, res) {
-    contact.create([
-        "name", "email", "body", "created_at",
-    ], [
-        req.body.name, req.body.email, req.body.body, req.body.created_at
-    ], function (result) {
-        console.log("hi")
-        res.redirect("/")
-    }).catch(function (err) {
-        res.status(401).json(err);
-    });
+    contact.create(
+        req.body.name, req.body.email, req.body.body, req.body.created_at,
+        function (result) {
+            console.log(result)
+            res.redirect("/")
+        }).catch(function (err) {
+            res.status(401).json(err);
+        });
 });
 
 // Export routes for server.js to use.

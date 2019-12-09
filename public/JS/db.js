@@ -16,6 +16,7 @@ $(document).ready(function () {
             $.ajax("/api/contacts", {
                 type: "POST",
                 data: newContact
+                
             }).then(function (data) {
                 location.reload();
                 alert("Thank you for your submission!")

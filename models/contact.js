@@ -23,4 +23,4 @@ var contact = {
       });
     }
   };
-  module.exports = contact;
+  module.exports = contact

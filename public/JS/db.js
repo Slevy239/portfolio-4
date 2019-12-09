@@ -5,7 +5,7 @@ $(document).ready(function () {
         event.preventDefault();
 
         let newContact = {
-            name: $("#name").val().trim(),
+            title: $("#name").val().trim(),
             email: $("#email").val().trim(),
             body: $("#body").val().trim(),
             created_at: moment().format("YYYY-MM-DD HH:mm:ss")
@@ -13,7 +13,7 @@ $(document).ready(function () {
         var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
         if (testEmail.test(newContact.email)) {
             console.log(newContact);
-            $.ajax("/api/contacts", {
+            $.ajax("/api/new", {
                 type: "POST",
                 data: newContact
 

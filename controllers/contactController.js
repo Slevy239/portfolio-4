@@ -13,9 +13,12 @@ router.get("/", function (req, res) {
 });
 
 
-router.post("/api/contacts", function (req, res) {
-    contact.create(
-        req.body.name, req.body.email, req.body.body, req.body.created_at,
+router.post("/api/new", function (req, res) {
+    contact.create([
+        "title", "email", "body", "created_at"
+    ], [
+        req.body.title,req.body.email, req.body.body, req.body.created_at,
+    ],
         function (result) {
             console.log(result)
             res.redirect("/")

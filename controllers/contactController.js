@@ -19,9 +19,7 @@ router.post("/api/contacts", function (req, res) {
         function (result) {
             console.log(result)
             res.redirect("/")
-        }).catch(function (err) {
-            res.status(401).json(err);
-        });
+        })
 });
 
 // Export routes for server.js to use.

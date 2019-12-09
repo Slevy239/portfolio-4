@@ -17,7 +17,7 @@ router.post("/api/new", function (req, res) {
     contact.create([
         "id","title", "email", "body", "created_at"
     ], [
-        req.body.title,req.body.email, req.body.body, req.body.created_at, req.body.id
+        req.body.id,req.body.title,req.body.email, req.body.body, req.body.created_at 
     ],
         function (result) {
             console.log(result)

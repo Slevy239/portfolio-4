@@ -3,7 +3,6 @@ var PORT = process.env.PORT || 8080;
 var app = express();
 var path = require('path');
 
-app.use(express.static("public"));
 
 
 

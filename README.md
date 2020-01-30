@@ -1,3 +1,8 @@
-#Professional Portfolio
+# Professional Portfolio
 
-Sam Levy's Professional Portfolio
+## Technologies used:
+* Handlebars
+* MySQL
+* Express
+* JQuery
+

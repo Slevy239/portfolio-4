@@ -13,7 +13,7 @@ if (process.env.JAWSDB_URL) {
     database: "portfolio",
     insecureAuth : true
     });
-  }//hi
+  }
   
 // Connect to the database
 connection.connect(function(err) {
